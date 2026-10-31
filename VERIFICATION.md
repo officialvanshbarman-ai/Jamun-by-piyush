@@ -9,20 +9,20 @@
 - Production dependency audit: zero production advisories. The dev tooling audit reports 16 moderate advisories through the ESLint/minimatch dependency chain; no unsafe forced downgrade was applied. Sharp was updated to 0.35.5.
 - Local font stack avoids remote font requests. Images are local optimized WebP, with original user PNGs retained.
 
-## GitHub delivery blocker
+## GitHub delivery
 
-The repository was empty at clone time. No existing files or history were overwritten. Work is on `feat/jamun-luxury`.
+The repository was empty at clone time. No existing files or history were overwritten. The complete website and assets were successfully pushed to `feat/jamun-luxury` after the user authenticated the owning GitHub account.
 
-Git HTTPS push failed: `Permission to officialvanshbarman-ai/Jamun-by-piyush.git denied to zdhoorkya` (HTTP 403).
+Repository: https://github.com/officialvanshbarman-ai/Jamun-by-piyush
 
-The connected GitHub account identifies as officialvanshbarman-ai and reports repository push/admin permissions, but a Contents API write was rejected with `Resource not accessible by integration` (HTTP 403). No remote file, branch or pull request was created.
+Branch: https://github.com/officialvanshbarman-ai/Jamun-by-piyush/tree/feat/jamun-luxury
 
-After signing Git into an account with write access, run from this checkout:
+No pull request was opened because the initially empty repository has no separate main branch to target. This source upload does not deploy a publicly hosted website.
+
+To update the same branch from this checkout:
 
 ```powershell
-git push -u origin feat/jamun-luxury
+git -c credential.username=officialvanshbarman-ai push -u origin feat/jamun-luxury
 ```
 
-This publishes the complete local commit. Because the remote is empty and has no main history yet, initialize an appropriate review base before opening a PR, or deliberately make this the initial default branch. No force push is needed.
-
-A source ZIP and Git bundle are also supplied beside the workspace. The bundle preserves the commit and branch and can be cloned with `git clone jamun-source.bundle jamun`.
+Earlier HTTPS and connector write attempts were rejected with HTTP 403; Git HTTPS delivery succeeded after account authentication. The earlier local source ZIP and Git bundle remain available beside the workspace; GitHub contains the current delivery notes.
